@@ -1,16 +1,12 @@
-# frozen_string_literal: true
+require_relative "boot"
 
-# The application is also responsible for setting up and executing the booting process
-
-require_relative 'boot'
-require 'rails/all'
+require "rails/all"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
 module Tracker
-  # Application class used to boot rails app
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
